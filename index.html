@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Your Luck</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Test your luck</h1>
+        <div class="input-section">
+            <label for="mod-select">Mod Seçin:</label>
+            <select id="mod-select">
+                <option value="Yüzdelik Olasılık">Yüzdelik Olasılık</option>
+                <option value="Olacak Olmayacak">Olacak Olmayacak</option>
+                <option value="Seçim Çarkı">Seçim Çarkı</option>
+                <option value="Öngörü">Öngörü</option>
+            </select>
+            <label for="event-input">Olayı Girin:</label>
+            <input type="text" id="event-input">
+            <label for="attempt-input">Kaç kez denemek istersiniz?</label>
+            <input type="number" id="attempt-input" min="1" value="1">
+            <button id="start-btn">Başla</button>
+            <button id="reset-btn">Sıfırla</button>
+            <button id="tutorial-btn">Tutorial</button>
+        </div>
+        <div class="output-section">
+            <div id="progress-bar"></div>
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        <th>Olay</th>
+                        <th>Sonuç</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="stats" id="stats-section">
+                <h2>Başarı İstatistikleri</h2>
+                <div id="success-stats">
+                    <p>Toplam Başarılı Deneme Sayısı: <span id="success-count">0</span></p>
+                    <p>Toplam Başarısız Deneme Sayısı: <span id="failure-count">0</span></p>
+                    <p>Ortalama Başarı Oranı: <span id="average-success-rate">0%</span></p>
+                    <p>Geçen Zaman: <span id="elapsed-time">0 saniye</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
